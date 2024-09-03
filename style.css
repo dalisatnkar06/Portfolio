@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1f242d;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10%;
+    border-bottom: black 1px solid;
+    /* position: fixed; */
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 27px;
+    cursor: default;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 10px;
+    font-weight: 600;
+    transition: 0.3s all;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+}
+
+.hero-container {
+    display: flex;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-side h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.info-side h1 {
+    font-size: 75px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.info-side h3 span {
+    color: #0ef;
+}
+
+p {
+    line-height: 27px;
+    margin: 20px 0px 40px 0px;
+}
+
+.hero-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+#icon {
+    position: relative;
+    border: 2px solid #0ef;
+    padding: 10px;
+    border-radius: 50%;
+    color: #0ef;
+    margin: 0 8px;
+    transition: 0.3ms;
+}
+
+#icon:hover {
+    box-shadow: 0 0 20px #0ef;
+}
+
+.info-side {
+    margin-right: 80px;
+}
+
+button {
+    background-color: #0ef;
+    margin-top: 30px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 0 20px #0ef;
+}
+
+
+/* About */
+
+.container {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.container .text h2 {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 48px;
+    text-align: start;
+}
+
+.container img {
+    float: left;
+    margin-left: 70px;
+    border-radius: 20px;
+    margin-right: 50px;
+    height: 25rem;
+}
+
+.container .text span {
+    display: block;
+    overflow: hidden;
+}
+
+.tab-content {
+    display: none;
+    margin-top: -20px;
+}
+
+.tab-content.active-tab {
+    display: block;
+}
+
+.tab-title {
+    display: flex;
+}
+
+.tab-link {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-content ul li {
+    list-style: none;
+}
+
+.tab-link::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #0ef;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-link.active-link::after {
+    width: 50%;
+}
+
+
+/* my work */
+
+#project {
+    padding-right: 100px;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work img {
+    border-radius: 10px;
+    width: 340px;
+    height: 400px;
+}
+
+.but button {
+    background-color: #0ef;
+    margin-top: 50px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 0 20px #0ef;
+    text-align: center;
+    position: relative;
+    left: 34rem;
+}
+
+#project h1 {
+    padding-left: 80px;
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.work .layer {
+    padding: 80px;
+}
+
+.work .layer h3,
+.work .layer p {
+    margin: 0;
+}
+
+.work {
+    position: relative;
+}
+
+.work .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 340px;
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #000000;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    margin-left: 70px;
+}
+
+.work:hover .layer {
+    opacity: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
+}
+
+.work .layer h3 {
+    margin-bottom: 30px;
+    margin-top: 70px;
+}
+
+.work .layer a {
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    border-radius: 48%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* contect */
+
+.contact-right {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.contact-right form {
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.contact-right button {
+    background-color: #0ef;
+    margin-top: 15px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 0 20px #0ef;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contect .container {
+    display: flex;
+    margin-left: 80px;
+}
+
+#contect .container i {
+    display: inline;
+    font-size: 20px;
+    color: #0ef;
+    padding-right: 10px;
+}
+
+
+/* footer */
+
+footer {
+    color: #888;
+    font-size: 14px;
+    position: relative;
+    top: 25px;
+    background-color: black;
+    display: flex;
+    height: 50px;
+    padding-left: 28rem;
+}
+
+footer i {
+    color: red;
+}
+
+
+/* -------css for small screen------- */
+
+@media only screen and (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .info-side {
+        margin-right: 0;
+    }
+    .hero-img img {
+        width: 300px;
+        height: 300px;
+        margin-top: 20px;
+    }
+    .tab-link {
+        margin-right: 20px;
+    }
+    .tab-link.active-link::after {
+        width: 30%;
+    }
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .but button {
+        left: 0;
+    }
+    footer {
+        padding-left: 0;
+        justify-content: center;
+    }
+    #about .container img {
+        margin-left: 35px;
+        margin-top: 70px;
+        margin-bottom: 10px;
+    }
+    #about .container .text h2 {
+        position: relative;
+        top: -450px;
+    }
+    #about .container .text {
+        margin-left: 35px;
+    }
+    #project .container {
+        margin-left: -45px;
+    }
+    .but button {
+        margin-left: 75px;
+    }
+    #contect .container .contact-left {
+        margin-left: -30px;
+    }
+    #contect .container .contact-left i {
+        font-size: 25px;
+        color: #0ef;
+        padding-left: 5px;
+    }
+    footer {
+        margin-top: -70px;
+    }
+    #contect .container {
+        display: block;
+    }
+    #contect .container form {
+        margin-left: -39px;
+    }
+    /* Hide navigation menu by default */
+    .navbar {
+        display: none;
+    }
+    /* Style for bars icon */
+    .fa-bars {
+        cursor: pointer;
+    }
+    /* Style for close icon */
+    .fa-xmark {
+        cursor: pointer;
+    }
+    /* Show navigation menu when targeted */
+    #navbar:target {
+        display: block;
+    }
+    /* Hide bars icon when navigation menu is targeted */
+    #navbar:target~#header #menu-icon {
+        display: none;
+    }
+    /* Show close icon when navigation menu is targeted */
+    #navbar:target~#header #close-icon {
+        display: block;
+    }
+    #scroll button {
+        position: relative;
+        left: 50px;
+        scroll-behavior: smooth;
+        bottom: 50px;
+    }
+}
+
+#msg {
+    color: rgb(196, 54, 54);
+    position: relative;
+    left: 150px;
+}
+
+#scroll button {
+    position: relative;
+    left: 50px;
+    scroll-behavior: smooth;
+}
